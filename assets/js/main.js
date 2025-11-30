@@ -120,6 +120,7 @@ if (contactForm) {
         submitBtn.disabled = true;
 
         const templateParams = {
+            name: name,
             from_name: name,
             message: letter,
             to_email: 'kolyanchik497@gmail.com'
