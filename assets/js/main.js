@@ -104,3 +104,38 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Contact Form Handler
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('birth-name').value;
+        const letter = document.getElementById('official-letter').value;
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerText;
+
+        submitBtn.innerText = 'Отправка...';
+        submitBtn.disabled = true;
+
+        const templateParams = {
+            from_name: name,
+            message: letter,
+            to_email: 'kolyanchik497@gmail.com'
+        };
+
+        emailjs.send('service_4o6sh1m', 'template_gvj56tm', templateParams)
+            .then(function () {
+                alert('Послание успешно отправлено Дону!');
+                contactForm.reset();
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }, function (error) {
+                alert('Ошибка отправки: ' + JSON.stringify(error));
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            });
+    });
+}
+
