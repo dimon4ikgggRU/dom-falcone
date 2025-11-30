@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>История - Falcone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000000; color: #ffffff; font-family: 'Titillium Web', sans-serif; line-height: 1.6; font-weight: 700; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .topbar { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); padding: 1.5rem 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .topbar-inner { display: flex; justify-content: space-between; align-items: center; }
+        .brand { display: flex; align-items: center; gap: 12px; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
+        .logo-mark { width: 24px; height: 24px; background: linear-gradient(135deg, #ff1744, #ff6e40); border-radius: 50%; }
+        .nav { display: flex; gap: 2rem; }
+        .nav a { color: #ffffff; text-decoration: none; transition: color 0.3s; font-weight: 700; }
+        .nav a:hover { color: #ff1744; }
+        
+        .page-header { min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; color: #ffffff; font-weight: 700; animation: fadeInUp 0.8s ease-out; }
+        .page-header p { font-size: 1.1rem; color: #cccccc; animation: fadeInUp 0.8s ease-out 0.2s both; }
+        
+        .content-section { padding: 4rem 0; }
+        .content-block { margin-bottom: 3rem; animation: fadeInUp 0.8s ease-out; }
+        .content-block h2 { font-size: 2rem; margin-bottom: 1rem; color: #ff1744; }
+        .content-block p { font-size: 1rem; color: #cccccc; line-height: 1.8; margin-bottom: 1rem; }
+        
+        .timeline { position: relative; padding: 2rem 0; }
+        .timeline-item { margin-bottom: 3rem; padding-left: 3rem; position: relative; opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item::before { content: ''; position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ff1744; border-radius: 50%; border: 3px solid #000000; }
+        .timeline-item::after { content: ''; position: absolute; left: 5px; top: 12px; width: 2px; height: calc(100% + 3rem); background: rgba(255, 23, 68, 0.3); }
+        .timeline-item:last-child::after { display: none; }
+        .timeline-item h3 { color: #ff1744; margin-bottom: 0.5rem; }
+        .timeline-item .date { color: #999999; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .timeline-item p { color: #cccccc; }
+        
+        .site-footer { background: #000000; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: #ffffff; font-weight: 700; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .nav { gap: 1rem; font-size: 0.9rem; }
+            .timeline-item { padding-left: 2rem; }
+        }
+    </style>
+    <link rel="icon" href="/Falcone.png" type="image/png">   
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand" href="index.html">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                    <div class="logo-mark" aria-hidden="true" style="background: url('Falcone.png') no-repeat center/cover;"></div>
+                    <span class="brand-title">Дом Фальконе</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="about.html">О доме</a>
+                <a href="history.html">История</a>
+                <a href="enemies.html">Противники</a>
+                <a href="news.html">Новости</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('JimBeam-Magazin.jpg') center/cover no-repeat; background-position: center 70%;">
+        <div class="container" style="text-align: center;">
+            <h1>История Дома Фальконе</h1>
+            <p>От истоков до наших дней</p>
+        </div>
+    </div>
+
+    <main class="content-section">
+        <div class="container">
+            <div class="content-block">
+                <h2>Зарождение дома Фальконе</h2>
+                <p>Дом Фальконе зародился в священную ночь с четвёртого на пятое октября 2025-го года, когда бесстрашные воины впервые встали на защиту своих идеалов.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Великая битва</h3>
+                    <div class="date">4-5 октября 2025</div>
+                    <p>Всё началось 4-го октября, с отъезда матушки воина Максима, который в последствии станет известен как Максоне де Повароне. Дух свободы окутал Максима и его товарища Дмитрия, который в последствии будет носить имя Димоне де Патроне. Бесстрашные воины отправились в кауфланд в 8 утра за легендарной 1,5-литровой бутылкой Джим Бима по акции (19.99 евро за бутылку). Вместе с ним также было приобретено около 10 литров пепси в качестве запивона, который даже не пригодится воинам.</p>
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <img src="history1.jpg" alt="Великая битва" style="width: 45%; max-width: 400px; border-radius: 8px;">
+                        </div>
+                    <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                        На фото: Димоне де Патроне и Джим Бим
+                    </p>
+                    <p style="margin-top: 1rem;">Воины отправились домой к Максиму, где они приготовили легендарное блюдо дома Фальконе - макароны с сыром и тунцом. Именно благодаря этому блюду Максоне де Повароне получил свой титул "де Повароне". Бойцы приготовились начать неравный бой с противником.</p>
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="width: 45%; max-width: 400px;">
+                        <img src="history2.jpg" alt="Готовка" style="width: 100%; border-radius: 8px;">
+                        <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                            Максоне де Повароне готовит фирменное блюдо
+                        </p>
+                    </div>
+                    <div style="width: 45%; max-width: 400px;">
+                        <img src="history3.jpg" alt="Бурбон" style="width: 100%; border-radius: 8px;">
+                        <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                            Джим Бим перед началом битвы
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;">Но противник был слишком силён. Дмитрий и Максим проиграли битву и отправились спать уже в полдень. Проспав до около 16 часов.</p>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <img src="history4.jpg" alt="Максим спит" style="width: 45%; max-width: 400px; border-radius: 8px;">
+                        </div>
+                    <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                        На фото: Максоне де Повароне восстанавливается после первой битвы
+                    </p>
+
+                    <p style="margin-top: 1rem;">После этого поражения Дмитрий и Максим поняли, что нужно вызывать подмогу. Были достигнуты договорённости с Аркадием (Доном Фальконе) и Антоном (Антоне де Снюсоне) об общем противостоянии Джим Биму. При этом в последующей битве также участвовали Тимофей и его друг Марк, приехавший из Украины. Бесстрашные воины также приобрели ликёр Джим Бим Черри, делая свою участь всё страшнее и страшнее. Перед тем как начать основную битву воины решили пойти в бар, дабы испить по коктейлю, что они собственно и сделали. После бара, было принято решение о ротации в подвал Аркадия, где и будет в последствии объявлено о создании дома Фальконе. На момент прибытия в подвал и к началу распития Джим Бима воины уже понесли небольшой урон.</p>
+
+                      <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <img src="history5.jpg" alt="Воины в подвале" style="width: 45%; max-width: 400px; border-radius: 8px;">
+                        </div>
+                    <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                        На фото: Максоне де Повароне в подвале Дона Фальконе
+                    </p>
+
+                    <p style="margin-top: 1rem;">Димоне де Патроне покинул поле сражений раньше остальных. Через несколько дней были раскрыты подробности окончания того вечера. С каждой выпитой рюмкой Аркадий всё меньше использовал человеческую речь, а к последней рюмке он вообще перестал говорить и только показывал жестами. Антон стал красным будто помидор. Бойцы понимали, что бой проигран. Именно при этой кондиции создание Дома Фальконе стало возможным. По началу Аркадия называли Дон Пердун, но в итоге Аркадий провозгласил: "Я Дон Дома Фальконе!". В результате этой битвы Джим Бим, хоть и был полностью выпит бойцами, всё-таки одержал победу в этой непростой битве, которая началась в 9 утра, а закончилась в 2 часа ночи. 
+                        <br>
+                        <br><i>Придёт день, и легендарная битва повторится вновь...</i></p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <h3>Институционализация, первое собрание Дома Фальконе</h3>
+                    <div class="date">10-11 октября 2025</div>
+                    <p>10 октября на встрече бойцов Дома Фальконе было принято решение о создании легендарной группы в телеграм под названием "Дом Фальконе". Дмитрию было поручено разработать дизайн логотипа для Дома Фальконе. Именно благодаря этому за Дмитрием закрепился титул "де Патроне".</p>
+
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <img src="history6.jpg" alt="Первое собрание" style="width: 55%; max-width: 800px; border-radius: 8px;">
+                        </div>
+                    <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">
+                        На фото: Первое собрание Дома Фальконе после Великой битвы (10 октября 2025 года)
+                    </p>
+
+                    <p style="margin-top: 1rem;">Димоне де Патроне разработал 6 вариантов логотипа для Дома Фальконе.</p>
+
+                    <style>
+                        @keyframes glowPulse {
+                            0% { 
+                                box-shadow: 0 0 10px rgba(255, 23, 68, 0.3), inset 0 0 10px rgba(255, 23, 68, 0.1);
+                            }
+                            50% { 
+                                box-shadow: 0 0 30px rgba(255, 23, 68, 0.6), inset 0 0 20px rgba(255, 23, 68, 0.2);
+                            }
+                            100% { 
+                                box-shadow: 0 0 10px rgba(255, 23, 68, 0.3), inset 0 0 10px rgba(255, 23, 68, 0.1);
+                            }
+                        }
+                        
+                        @keyframes slideIn {
+                            from {
+                                transform: scale(0.95) rotateY(10deg);
+                                opacity: 0.8;
+                            }
+                            to {
+                                transform: scale(1.08) rotateY(0deg);
+                                opacity: 1;
+                            }
+                        }
+                        
+                        .logo-item { 
+                            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                            border-radius: 8px; 
+                            position: relative;
+                            perspective: 1000px;
+                        }
+                        
+                        .logo-item:hover { 
+                            animation: glowPulse 1.5s ease-in-out forwards;
+                            transform: scale(1.08) translateY(-8px);
+                        }
+                        
+                        .logo-item:hover img { 
+                            transform: scale(1.1);
+                        }
+                    </style>
+
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo1.jpg" alt="Логотип 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 1</p>
+                        </div>
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo2.jpg" alt="Логотип 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 2</p>
+                        </div>
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo3.jpg" alt="Логотип 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 3</p>
+                        </div>
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo4.jpg" alt="Логотип 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 4</p>
+                        </div>
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo5.jpg" alt="Логотип 5" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 5</p>
+                        </div>
+                        <div class="logo-item" style="width: 30%; max-width: 300px;">
+                            <div style="height: 300px; overflow: hidden; border-radius: 8px;">
+                                <img src="logo6.jpg" alt="Логотип 6" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            </div>
+                            <p class="image-caption" style="font-size:0.95rem; color:#bbbbbb; margin-top:0.75rem; text-align: center;">Вариант 6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Расширение влияния</h3>
+                    <div class="date">Ноябрь 2025 - настоящее время</div>
+                    <p>Дом Фальконе продолжает расширять свои ряды, привлекая в свои ряды лучших бойцов. Еженедельные сражения против духов зла становятся всё более организованными.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Серые кардиналы</h3>
+                    <div class="date">Настоящее время</div>
+                    <p>Сегодня Дом Фальконе известен как серые кардиналы города Оснабрюк, чьё влияние простирается на все уголки нашей могучей организации.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© Дом Фальконе — 2025</small>
+        </div>
+    </footer>
+</body>
+</html>

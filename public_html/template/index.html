@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Falcone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000000; color: #ffffff; font-family: 'Titillium Web', sans-serif; line-height: 1.6; font-weight: 700; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .topbar { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); padding: 1.5rem 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .topbar-inner { display: flex; justify-content: space-between; align-items: center; }
+        .brand { display: flex; align-items: center; gap: 12px; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
+        .logo-mark { width: 24px; height: 24px; background: linear-gradient(135deg, #ff1744, #ff6e40); border-radius: 50%; }
+        .nav { display: flex; gap: 2rem; }
+        .nav a { color: #ffffff; text-decoration: none; transition: color 0.3s; font-weight: 700; }
+        .nav a:hover { color: #ff1744; }
+        
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 0; }
+        .hero-card { animation: fadeInUp 1s ease-out; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1.5rem; color: #ffffff; font-weight: 700; animation: fadeInUp 0.8s ease-out 0.2s both; }
+        .hero p { font-size: 1.1rem; color: #ffffff; max-width: 600px; margin: 0 auto 2rem; font-weight: 700; animation: fadeInUp 0.8s ease-out 0.4s both; }
+        
+        .actions { display: flex; gap: 1rem; justify-content: center; animation: fadeInUp 0.8s ease-out 0.6s both; }
+        .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, #ff1744, #ff6e40); color: #ffffff; border: none; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255, 23, 68, 0.3); }
+        .btn-ghost { background: transparent; color: #ffffff; border: 2px solid #ffffff; }
+        .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
+        
+        .hero-visual { animation: fadeInUp 0.8s ease-out 0.8s both; }
+        
+        .site-footer { background: #000000; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; text-align: center; color: #ffffff; font-weight: 700; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav { gap: 1rem; font-size: 0.9rem; }
+            .actions { flex-direction: column; }
+        }
+    </style>
+    <link rel="icon" href="/Falcone.png" type="image/png">   
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand" href="index.html">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                    <div class="logo-mark" aria-hidden="true" style="background: url('Falcone.png') no-repeat center/cover;"></div>
+                    <span class="brand-title">Дом Фальконе</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="about.html">О доме</a>
+                <a href="history.html">История</a>
+                <a href="enemies.html">Противники</a>
+                <a href="news.html">Новости</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-card" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Falcone-group.jpeg') center/cover no-repeat; background-attachment: fixed; border-radius: 0; padding: 22rem 2rem; width: 100vw; background-position: center top;">
+            <div class="container hero-content">
+            <h1 style="font-family: 'Titillium Web', sans-serif; font-weight:700; font-size:3rem;">Официальная страница дома Фальконе</h1>
+            <p>Примкнуть к нам способны лишь лучшие</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="about.html" style="background: linear-gradient(135deg, #6f6f6f, #cfcfcf); color: #ffffff;">Узнать больше</a>
+                <a class="btn btn-ghost" href="#">Связаться</a>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© Дом Фальконе — 2025</small>
+        </div>
+    </footer>
+</body>
+</html>
